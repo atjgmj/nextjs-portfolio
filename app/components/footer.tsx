@@ -1,3 +1,7 @@
+'use client'
+
+import { useLanguage } from '../../hooks/useLanguage'
+
 function ArrowIcon() {
   return (
     <svg
@@ -16,81 +20,47 @@ function ArrowIcon() {
 }
 
 export default function Footer() {
+  const { t } = useLanguage()
   return (
     <footer className="mb-16">
-      <div className="border-t border-gray-200 pt-8 mt-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-semibold text-lg mb-4">AI × フルスタックエンジニア</h3>
-            <p className="text-gray-600 text-sm">
-              Next.js × FastAPI × AI を活用したWebアプリケーション開発を専門としています。
-            </p>
-          </div>
-          <div>
-            <h4 className="font-medium mb-4">リンク</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/projects" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  プロジェクト一覧
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  お問い合わせ
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-medium mb-4">SNS</h4>
-            <ul className="font-sm flex flex-col space-y-2 text-neutral-600 dark:text-neutral-300">
-              <li>
-                <a
-                  className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://github.com"
-                >
-                  <ArrowIcon />
-                  <p className="ml-2 h-7">GitHub</p>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://linkedin.com"
-                >
-                  <ArrowIcon />
-                  <p className="ml-2 h-7">LinkedIn</p>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href="https://twitter.com"
-                >
-                  <ArrowIcon />
-                  <p className="ml-2 h-7">X (Twitter)</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="border-t border-gray-200 pt-8 mt-8">
-          <p className="text-center text-gray-500 text-sm">
-            © {new Date().getFullYear()} AI × フルスタックエンジニア ポートフォリオ. All rights reserved.
-          </p>
-        </div>
-      </div>
+      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://github.com"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">github</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://linkedin.com"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">linkedin</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://twitter.com"
+          >
+            <ArrowIcon />
+            <p className="ml-2 h-7">twitter</p>
+          </a>
+        </li>
+      </ul>
+      <p className="mt-8 text-neutral-600 dark:text-neutral-300">
+        © {new Date().getFullYear()} {t('copyright')}
+      </p>
     </footer>
   )
 }

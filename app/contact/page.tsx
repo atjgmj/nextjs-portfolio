@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useLanguage } from '../../hooks/useLanguage'
 
 export default function ContactPage() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,12 +41,11 @@ export default function ContactPage() {
   return (
     <section>
       <div className="mb-12">
-        <h1 className="mb-6 text-3xl font-bold tracking-tight">
-          お問い合わせ
+        <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+          {t('contactTitle')}
         </h1>
-        <p className="text-lg text-gray-600 leading-relaxed">
-          AI × Web開発に関するご相談、プロジェクトのご依頼など、<br />
-          お気軽にお問い合わせください。24時間以内に返信いたします。
+        <p className="mb-4">
+          {t('contactSubtitle')}
         </p>
       </div>
 

@@ -1,6 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import projectsData from '../../data/projects.json'
+import { useLanguage } from '../../hooks/useLanguage'
 
 const getTechColor = (color: string) => {
   const colors = {
@@ -24,13 +27,15 @@ const getStatusBadge = (status: string) => {
 }
 
 export default function ProjectsPage() {
+  const { t, getNestedTranslation } = useLanguage()
+
   return (
     <section>
-      <h1 className="mb-8 text-3xl font-bold tracking-tight">
-        プロジェクト一覧
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+        {t('projectsTitle')}
       </h1>
-      <p className="mb-12 text-lg text-gray-600">
-        AI × フルスタック技術を活用したWebアプリケーションの開発実績・予定プロジェクトです。
+      <p className="mb-12">
+        {t('projectsSubtitle')}
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -94,7 +99,7 @@ export default function ProjectsPage() {
                   href={`/projects/${project.id}`}
                   className="flex-1 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors text-center"
                 >
-                  詳細を見る
+                  {t('viewDetails')}
                 </Link>
                 {project.githubUrl && (
                   <a

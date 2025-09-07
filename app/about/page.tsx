@@ -1,4 +1,9 @@
+'use client'
+
+import { useLanguage } from '../../hooks/useLanguage'
+
 export default function AboutPage() {
+  const { t } = useLanguage()
   const skills = {
     frontend: [
       { name: 'Next.js', level: 90 },
@@ -40,25 +45,18 @@ export default function AboutPage() {
   return (
     <section>
       <div className="mb-12">
-        <h1 className="mb-6 text-3xl font-bold tracking-tight">
-          About Me
+        <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+          {t('aboutTitle')}
         </h1>
-        <div className="prose prose-gray max-w-none">
-          <p className="text-lg text-gray-600 leading-relaxed mb-6">
-            AI技術とモダンWeb開発を組み合わせたフルスタック開発を専門としています。<br />
-            特にNext.js × FastAPI × OpenAI APIの組み合わせによる実用的なAIアプリケーションの構築を得意としています。
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            大学では情報系を専攻し、卒業後は独学でWeb開発とAI技術を習得。<br />
-            現在はフリーランスとして、企業のAI導入支援やWebアプリケーション開発を行っています。
-          </p>
-        </div>
+        <p className="mb-4">
+          {t('aboutDescription')}
+        </p>
       </div>
 
       {/* スキルマップ */}
       <div className="mb-12">
-        <h2 className="mb-8 text-2xl font-semibold">
-          スキルマップ
+        <h2 className="mb-8 text-xl font-semibold tracking-tighter">
+          {t('skills')}
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
