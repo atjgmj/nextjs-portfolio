@@ -1,0 +1,112 @@
+[
+  {
+    "id": "ai-document-search",
+    "title": "AIドキュメント検索サービス（RAG）",
+    "description": "PDFアップロード機能付きの高精度AI検索・要約システム。pgvectorを使用したベクトル検索とLangChainによるRAG実装。",
+    "image": "/images/projects/ai-document-search.png",
+    "technologies": [
+      { "name": "Next.js", "color": "blue" },
+      { "name": "FastAPI", "color": "green" },
+      { "name": "LangChain", "color": "yellow" },
+      { "name": "pgvector", "color": "purple" },
+      { "name": "PostgreSQL", "color": "blue" }
+    ],
+    "features": [
+      "PDFアップロード・テキスト抽出",
+      "ベクトル検索による高精度な文書検索",
+      "AI要約機能",
+      "リアルタイム検索結果表示"
+    ],
+    "githubUrl": "",
+    "demoUrl": "",
+    "status": "planned"
+  },
+  {
+    "id": "ai-report-dashboard",
+    "title": "AIレポート自動生成ダッシュボード",
+    "description": "CSVデータアップロード機能とGPT-4oを活用した自動レポート生成、Rechartsによる可視化システム。",
+    "image": "/images/projects/ai-report-dashboard.png",
+    "technologies": [
+      { "name": "Next.js", "color": "blue" },
+      { "name": "FastAPI", "color": "green" },
+      { "name": "GPT-4o", "color": "purple" },
+      { "name": "Recharts", "color": "orange" },
+      { "name": "Pandas", "color": "blue" }
+    ],
+    "features": [
+      "CSVファイルアップロード",
+      "AI による自動データ分析",
+      "カスタマイズ可能な可視化",
+      "レポートPDF出力"
+    ],
+    "githubUrl": "",
+    "demoUrl": "",
+    "status": "planned"
+  },
+  {
+    "id": "ai-chat-saas",
+    "title": "AIチャットSaaS",
+    "description": "マルチテナント対応のAIチャットサービス。Clerk認証、PostgreSQLによるデータ管理、リアルタイムチャット機能。",
+    "image": "/images/projects/ai-chat-saas.png",
+    "technologies": [
+      { "name": "Next.js", "color": "blue" },
+      { "name": "NestJS", "color": "red" },
+      { "name": "Clerk", "color": "purple" },
+      { "name": "PostgreSQL", "color": "blue" },
+      { "name": "WebSocket", "color": "green" }
+    ],
+    "features": [
+      "マルチテナント対応",
+      "リアルタイムチャット",
+      "ユーザー認証・権限管理",
+      "チャット履歴管理"
+    ],
+    "githubUrl": "",
+    "demoUrl": "",
+    "status": "planned"
+  },
+  {
+    "id": "ai-voice-assistant",
+    "title": "AI音声アシスタント",
+    "description": "Whisper APIとTTS APIを活用した音声入出力対応のAIアシスタント。リアルタイム音声処理とGPT-4o連携。",
+    "image": "/images/projects/ai-voice-assistant.png",
+    "technologies": [
+      { "name": "Next.js", "color": "blue" },
+      { "name": "FastAPI", "color": "green" },
+      { "name": "Whisper API", "color": "purple" },
+      { "name": "TTS API", "color": "orange" },
+      { "name": "WebRTC", "color": "red" }
+    ],
+    "features": [
+      "リアルタイム音声認識",
+      "自然な音声合成",
+      "会話コンテキスト保持",
+      "多言語対応"
+    ],
+    "githubUrl": "",
+    "demoUrl": "",
+    "status": "planned"
+  },
+  {
+    "id": "ai-agent-tools",
+    "title": "AIエージェント × 外部ツール連携",
+    "description": "LangChain Agentsを使用したGoogle Calendar・Slack API連携システム。自然言語での外部サービス操作。",
+    "image": "/images/projects/ai-agent-tools.png",
+    "technologies": [
+      { "name": "Next.js", "color": "blue" },
+      { "name": "FastAPI", "color": "green" },
+      { "name": "LangChain Agents", "color": "yellow" },
+      { "name": "Google Calendar API", "color": "blue" },
+      { "name": "Slack API", "color": "purple" }
+    ],
+    "features": [
+      "自然言語でのカレンダー操作",
+      "Slack通知自動送信",
+      "複数サービス連携",
+      "AIエージェント機能"
+    ],
+    "githubUrl": "",
+    "demoUrl": "",
+    "status": "planned"
+  }
+]

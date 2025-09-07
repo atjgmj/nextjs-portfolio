@@ -11,16 +11,16 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'AI × フルスタックエンジニア | ポートフォリオ',
+    template: '%s | AI × フルスタックエンジニア',
   },
-  description: 'This is my portfolio.',
+  description: 'Next.js × FastAPI × AI を活用したWebアプリケーション開発を専門とするフルスタックエンジニアのポートフォリオサイトです。RAG、チャットボット、自動化ツールなどの開発実績をご紹介しています。',
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'AI × フルスタックエンジニア | ポートフォリオ',
+    description: 'Next.js × FastAPI × AI を活用したWebアプリケーション開発を専門とするフルスタックエンジニアのポートフォリオサイト',
     url: baseUrl,
-    siteName: 'My Portfolio',
-    locale: 'en_US',
+    siteName: 'AI × フルスタックエンジニア ポートフォリオ',
+    locale: 'ja_JP',
     type: 'website',
   },
   robots: {
@@ -45,14 +45,14 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="ja"
       className={cx(
         'text-black bg-white dark:text-white dark:bg-black',
         GeistSans.variable,
         GeistMono.variable
       )}
     >
-      <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+      <body className="antialiased max-w-4xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
           {children}
